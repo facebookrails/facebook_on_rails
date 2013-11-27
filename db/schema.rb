@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126160332) do
+ActiveRecord::Schema.define(version: 20131127134728) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 20131126160332) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
