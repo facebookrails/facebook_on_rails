@@ -8,8 +8,11 @@
 
   <div class="form-inputs">
     <%= f.input :email, :required => true, :autofocus => true, input_html: {class: "form-control"} %>
+
+    <% if f.object.password_required? %>
     <%= f.input :password, :required => true, input_html: {class: "form-control"} %>
     <%= f.input :password_confirmation, :required => true, input_html: {class: "form-control"} %>
+    <% end %>
   </div>
 </br>
 
