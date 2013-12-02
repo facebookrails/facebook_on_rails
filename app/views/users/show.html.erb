@@ -1,8 +1,19 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-4">
-			<h1><%= @user.name %></h1>
-		</div>
+			<div class="media">
+				<%= image_tag @user.get_profile_picture, class: "pull-left" %>
+				<div class="media-body">
+					<h4 class="media-heading"><%= @user.name %></h4>
+					from <%= @user.get_location %>
+				</div>
+			</div>
+			<hr>
+			<div class="books">
+				<% @user.get_books.each do |book| %>
+				<p><%= book["name"] %></p>
+				<% end %>
+		</div></div>
 		<div class="col-lg-6">
 			<% @user.posts.order("created_at DESC").each do |post| %>
 			<div class="post">

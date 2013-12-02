@@ -7,6 +7,11 @@
     <%= f.input :content, input_html: {class: 'form-control'}, label: false, placeholder: "Add your post's content here" %>
 </br>
 
+<% if current_user.verify_permissions == 1 %>
+<%= f.input :post_on_facebook %>
+</br>
+<% end %>
+
   </div>
 
   <div class="form-actions">
