@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<h1><%= @user.name %></h1>
+		</div>
+		<div class="col-lg-6">
+			<% @user.posts.order("created_at DESC").each do |post| %>
+			<div class="post">
+				<h5><%= post.title %></h5>
+				<p><%= post.content %></p>
+				<span class="pull-right label label-info"><%= time_ago_in_words(post.created_at) %> ago</span>
+
+				<% if post.user == current_user %>
+				<span class="pull-left"><%= link_to 'edit', edit_post_path(post), class: "btn btn-xs btn-primary" %> <%= link_to 'destroy', post, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-xs btn-danger" %></span>
+
+				<% end %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

@@ -36,6 +36,12 @@ gem 'devise'
 # Add Facebook Authentication via omniauth
 gem 'omniauth-facebook'
 
+# Adding Flat Design
+gem "flat-ui-rails"
+
+# Adding further integration with Facebook
+gem 'koala'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
