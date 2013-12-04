@@ -1,7 +1,7 @@
 development:
-  facebook_api_key: 772380956122044
-  facebook_api_secret: c40501444e72b3444d48c86f6e0ed275
+  facebook_api_key: your_development_key
+  facebook_api_secret: your_development_secret
 
 production:
-  facebook_api_key: 627865250607971
-  facebook_api_secret: 5a58d7afa66c431e2cde7a8bb64adb8c
+  facebook_api_key: your_production_secret
+  facebook_api_secret: your_development_secret
