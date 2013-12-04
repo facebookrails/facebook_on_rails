@@ -16,4 +16,6 @@ configure your facebook credentials in config/facebook.yml
 
 rake db:migrate
 
-To start the server just Run rails server
+To start the server just run: 
+
+rails server
