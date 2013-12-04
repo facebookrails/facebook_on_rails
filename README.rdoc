@@ -1,28 +1,19 @@
-== README
+== Welcome to The Facebook On Rails App ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To install just run the following steps:
 
-Things you may want to cover:
+git clone https://github.com/facebookrails/facebook_on_rails.git
 
-* Ruby version
+bundle install
 
-* System dependencies
+(If you have any problems with Postgres make sure you install the app from http://postgresapp.com/ and then run the following command:
 
-* Configuration
+gem install pg — —with-pg-config=/Applications/Postgres93.app/Contents/MacOS/bin/pg_config
 
-* Database creation
+)
 
-* Database initialization
+configure your facebook credentials in config/facebook.yml
 
-* How to run the test suite
+rake db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To start the server just Run rails server
